@@ -13,6 +13,7 @@ class Evento(models.Model):
     titulo = models.CharField(max_length=255)
     fecha = models.DateField()
     descripcion = models.TextField()
+    voluntarios = models.ManyToManyField(Voluntario, blank=True)
 
     def __str__(self):
         return self.titulo

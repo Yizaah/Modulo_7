@@ -9,6 +9,7 @@
     <tr>
         <th>Título</th>
         <th>Fecha</th>
+        <th>Descripción</th>   <!-- 🔥 NUEVO -->
         <th>Voluntarios Asignados</th>
         <th>Acciones</th>
     </tr>
@@ -17,11 +18,14 @@
     <tr>
         <td>{{ e.titulo }}</td>
         <td>{{ e.fecha }}</td>
+        <td>{{ e.descripcion }}</td>
+
         <td>
             {% for v in e.voluntarios.all %}
                 {{ v.nombre }}{% if not forloop.last %}, {% endif %}
             {% endfor %}
         </td>
+
         <td>
             <a href="{% url 'evento_update' e.id %}">Editar</a> |
             <a href="{% url 'evento_delete' e.id %}">Eliminar</a>
@@ -29,4 +33,5 @@
     </tr>
     {% endfor %}
 </table>
+
 {% endblock %}

@@ -10,4 +10,4 @@ class VoluntarioForm(forms.ModelForm):
 class EventoForm(forms.ModelForm):
     class Meta:
         model = Evento
-        fields = ['titulo', 'fecha', 'descripcion']
+        fields = ['titulo', 'fecha', 'descripcion', 'voluntarios']

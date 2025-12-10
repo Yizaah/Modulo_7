@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Lista de Eventos</h1>
+
+<a href="{% url 'evento_create' %}">Nuevo Evento</a>
+
+<table border="1">
+    <tr>
+        <th>Título</th>
+        <th>Fecha</th>
+        <th>Voluntarios Asignados</th>
+        <th>Acciones</th>
+    </tr>
+
+    {% for e in eventos %}
+    <tr>
+        <td>{{ e.titulo }}</td>
+        <td>{{ e.fecha }}</td>
+        <td>
+            {% for v in e.voluntarios.all %}
+                {{ v.nombre }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </td>
+        <td>
+            <a href="{% url 'evento_update' e.id %}">Editar</a> |
+            <a href="{% url 'evento_delete' e.id %}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

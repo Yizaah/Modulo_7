@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Lista de Voluntarios</h1>
+
+<a href="{% url 'voluntario_create' %}">Nuevo Voluntario</a>
+
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+    </tr>
+
+    {% for v in voluntarios %}
+    <tr>
+        <td>{{ v.nombre }}</td>
+        <td>{{ v.email }}</td>
+        <td>{{ v.telefono }}</td>
+        <td>
+            <a href="{% url 'voluntario_update' v.id %}">Editar</a> |
+            <a href="{% url 'voluntario_delete' v.id %}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

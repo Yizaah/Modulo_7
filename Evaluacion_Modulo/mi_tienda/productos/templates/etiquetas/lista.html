@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Etiquetas{% endblock %}
+
+{% block content %}
+<h1>Lista de Etiquetas</h1>
+<a href="{% url 'crear_etiqueta' %}" class="btn btn-primary mb-3">Crear Etiqueta</a>
+<ul class="list-group">
+    {% for etiqueta in etiquetas %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{ etiqueta.nombre }}
+        <span>
+            <a href="{% url 'editar_etiqueta' etiqueta.id %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'eliminar_etiqueta' etiqueta.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

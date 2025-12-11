@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Mi Tienda de Videojuegos</h1>
+                <p class="col-md-8 fs-4">Página de bienvenida — aquí gestionas productos, categorías y etiquetas relacionadas con videojuegos.</p>
+                <a class="btn btn-primary btn-lg" href="{% url 'lista_productos' %}" role="button">Ver Productos</a>
+            </div>
+        </div>
+        <p class="lead">Accede a las secciones: Productos, Categorías, Etiquetas y Detalles.</p>
+        <div class="d-flex justify-content-center gap-2 mt-3">
+            <a class="btn btn-primary" href="{% url 'lista_productos' %}">Productos</a>
+            <a class="btn btn-secondary" href="{% url 'lista_categorias' %}">Categorías</a>
+            <a class="btn btn-secondary" href="{% url 'lista_etiquetas' %}">Etiquetas</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

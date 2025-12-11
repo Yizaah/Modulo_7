@@ -1,0 +1,28 @@
+[
+  { "model": "productos.categoria", "pk": 1, "fields": { "nombre": "EC – Early Childhood" } },
+  { "model": "productos.categoria", "pk": 2, "fields": { "nombre": "E – Everyone" } },
+  { "model": "productos.categoria", "pk": 3, "fields": { "nombre": "E10+ – Everyone 10+" } },
+  { "model": "productos.categoria", "pk": 4, "fields": { "nombre": "T – Teen (13+)" } },
+  { "model": "productos.categoria", "pk": 5, "fields": { "nombre": "M – Mature (17+)" } },
+  { "model": "productos.categoria", "pk": 6, "fields": { "nombre": "AO – Adults Only (18+)" } },
+  { "model": "productos.categoria", "pk": 7, "fields": { "nombre": "RP – Rating Pending" } },
+
+  { "model": "productos.etiqueta", "pk": 1, "fields": { "nombre": "Acción" } },
+  { "model": "productos.etiqueta", "pk": 2, "fields": { "nombre": "Aventura" } },
+  { "model": "productos.etiqueta", "pk": 3, "fields": { "nombre": "RPG" } },
+  { "model": "productos.etiqueta", "pk": 4, "fields": { "nombre": "Shooter" } },
+  { "model": "productos.etiqueta", "pk": 5, "fields": { "nombre": "Deportes" } },
+  { "model": "productos.etiqueta", "pk": 6, "fields": { "nombre": "Simulación" } },
+  { "model": "productos.etiqueta", "pk": 7, "fields": { "nombre": "Estrategia" } },
+  { "model": "productos.etiqueta", "pk": 8, "fields": { "nombre": "Sandbox" } },
+  { "model": "productos.etiqueta", "pk": 9, "fields": { "nombre": "Puzzles" } },
+  { "model": "productos.etiqueta", "pk": 10, "fields": { "nombre": "Carreras" } },
+  { "model": "productos.etiqueta", "pk": 11, "fields": { "nombre": "Horror" } },
+
+  { "model": "productos.etiqueta", "pk": 12, "fields": { "nombre": "PC" } },
+  { "model": "productos.etiqueta", "pk": 13, "fields": { "nombre": "PlayStation" } },
+  { "model": "productos.etiqueta", "pk": 14, "fields": { "nombre": "Xbox" } },
+  { "model": "productos.etiqueta", "pk": 15, "fields": { "nombre": "Nintendo Switch" } },
+  { "model": "productos.etiqueta", "pk": 16, "fields": { "nombre": "Mobile" } },
+  { "model": "productos.etiqueta", "pk": 17, "fields": { "nombre": "VR" } }
+]
